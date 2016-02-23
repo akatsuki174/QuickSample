@@ -15,6 +15,8 @@
 		2C3E8EB61C7C0A5400D74699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3E8EB51C7C0A5400D74699 /* Assets.xcassets */; };
 		2C3E8EB91C7C0A5400D74699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3E8EB71C7C0A5400D74699 /* LaunchScreen.storyboard */; };
 		2C3E8EC41C7C0A5400D74699 /* QuickSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8EC31C7C0A5400D74699 /* QuickSampleTests.swift */; };
+		2C3E8ECF1C7C167200D74699 /* RealmGoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8ECE1C7C167200D74699 /* RealmGoods.swift */; };
+		2C3E8ED11C7C182B00D74699 /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8ED01C7C182B00D74699 /* Goods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		2C3E8EBF1C7C0A5400D74699 /* QuickSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3E8EC31C7C0A5400D74699 /* QuickSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSampleTests.swift; sourceTree = "<group>"; };
 		2C3E8EC51C7C0A5400D74699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C3E8ECE1C7C167200D74699 /* RealmGoods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmGoods.swift; sourceTree = "<group>"; };
+		2C3E8ED01C7C182B00D74699 /* Goods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
 		3CCAAF01DD8510AFC6ADEF45 /* Pods-QuickSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickSample/Pods-QuickSample.debug.xcconfig"; sourceTree = "<group>"; };
 		4D0029D70AC6AF680A5C93E8 /* Pods_QuickSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		995607C7218C9AC032DD25D9 /* Pods_QuickSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +106,8 @@
 			children = (
 				2C3E8EAE1C7C0A5400D74699 /* AppDelegate.swift */,
 				2C3E8EB01C7C0A5400D74699 /* ViewController.swift */,
+				2C3E8ECE1C7C167200D74699 /* RealmGoods.swift */,
+				2C3E8ED01C7C182B00D74699 /* Goods.swift */,
 				2C3E8EB21C7C0A5400D74699 /* Main.storyboard */,
 				2C3E8EB51C7C0A5400D74699 /* Assets.xcassets */,
 				2C3E8EB71C7C0A5400D74699 /* LaunchScreen.storyboard */,
@@ -331,6 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3E8EB11C7C0A5400D74699 /* ViewController.swift in Sources */,
+				2C3E8ECF1C7C167200D74699 /* RealmGoods.swift in Sources */,
+				2C3E8ED11C7C182B00D74699 /* Goods.swift in Sources */,
 				2C3E8EAF1C7C0A5400D74699 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
