@@ -30,4 +30,15 @@ class DBManager {
             print("failed")
         }
     }
+    
+    func deleteAll() {
+        do {
+            let realm = try Realm()
+            try! realm.write {
+                realm.deleteAll()
+            }
+        }catch{
+            print("failed")
+        }
+    }
 }

@@ -16,6 +16,14 @@ class RealmSpec: QuickSpec {
     
     override func spec() {
         
+        beforeEach {
+            self.dbManager.deleteAll()
+        }
+        
+        afterSuite {
+            self.dbManager.deleteAll()
+        }
+        
         describe("findAll method") {
             context("when not exist data") {
                 it("output 0 data") {
@@ -38,6 +46,20 @@ class RealmSpec: QuickSpec {
                     expect(actualGoods.price).to(equal(expectGoods.price))
                     expect(actualGoods.stock).to(equal(expectGoods.stock))
                 }
+            }
+        }
+        
+        describe("deleteAll method") {
+            it("delete all data") {
+                // add data
+                self.dbManager.update(self.createRealmGoods())
+                
+                // delete all data
+                self.dbManager.deleteAll()
+                
+                // find all data
+                let results = self.dbManager.findAll()!
+                expect(results.count).to(equal(0))
             }
         }
     }
