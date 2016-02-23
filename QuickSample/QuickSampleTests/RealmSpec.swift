@@ -47,6 +47,27 @@ class RealmSpec: QuickSpec {
                     expect(actualGoods.stock).to(equal(expectGoods.stock))
                 }
             }
+            
+            context("when add existing data") {
+                it("the data is updated") {
+                    let expectGoods1 = self.createRealmGoods()
+                    // add new data
+                    self.dbManager.update(expectGoods1)
+                    
+                    // add the same id data
+                    let expectGoods2 = self.createRealmGoods()
+                    expectGoods2.name = "Goods!"
+                    self.dbManager.update(expectGoods2)
+                    
+                    let results = self.dbManager.findAll()!
+                    let actualGoods = results[0]
+                    expect(results.count).to(equal(1))
+                    expect(actualGoods.id).to(equal(expectGoods2.id))
+                    expect(actualGoods.name).to(equal(expectGoods2.name))
+                    expect(actualGoods.price).to(equal(expectGoods2.price))
+                    expect(actualGoods.stock).to(equal(expectGoods2.stock))
+                }
+            }
         }
         
         describe("deleteAll method") {
