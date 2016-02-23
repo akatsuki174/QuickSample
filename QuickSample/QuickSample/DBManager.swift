@@ -13,7 +13,7 @@ class DBManager {
     func findAll() -> Results<RealmGoods>? {
         do {
             let realm = try Realm()
-            return realm.objects(RealmGoods)
+            return realm.objects(RealmGoods).sorted("id")
         }catch{
             print("failed")
         }
