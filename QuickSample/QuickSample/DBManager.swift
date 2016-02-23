@@ -6,7 +6,6 @@
 //  Copyright © 2016年 akatsuki174. All rights reserved.
 //
 
-import Foundation
 import RealmSwift
 
 class DBManager {
@@ -14,7 +13,7 @@ class DBManager {
         do {
             let realm = try Realm()
             return realm.objects(RealmGoods).sorted("id")
-        }catch{
+        } catch {
             print("failed")
         }
         return nil
@@ -26,7 +25,7 @@ class DBManager {
             try! realm.write {
                 realm.add(goods, update: true)
             }
-        }catch{
+        } catch {
             print("failed")
         }
     }
@@ -37,7 +36,7 @@ class DBManager {
             try! realm.write {
                 realm.deleteAll()
             }
-        }catch{
+        } catch {
             print("failed")
         }
     }
