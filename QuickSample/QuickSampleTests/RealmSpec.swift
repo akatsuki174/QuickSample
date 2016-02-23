@@ -24,5 +24,30 @@ class RealmSpec: QuickSpec {
                 }
             }
         }
+        
+        describe("update method") {
+            context("when add new data") {
+                it("new data is inserted") {
+                    let expectGoods = self.createRealmGoods()
+                    self.dbManager.update(expectGoods)
+                    
+                    let results = self.dbManager.findAll()!
+                    let actualGoods = results[0]
+                    expect(actualGoods.id).to(equal(expectGoods.id))
+                    expect(actualGoods.name).to(equal(expectGoods.name))
+                    expect(actualGoods.price).to(equal(expectGoods.price))
+                    expect(actualGoods.stock).to(equal(expectGoods.stock))
+                }
+            }
+        }
+    }
+    
+    func createRealmGoods() -> RealmGoods {
+        let realmGoods = RealmGoods()
+        realmGoods.id = 1
+        realmGoods.name = "goods"
+        realmGoods.price = 200
+        realmGoods.stock = 1
+        return realmGoods
     }
 }
