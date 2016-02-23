@@ -13,4 +13,8 @@ class RealmGoods: Object {
     dynamic var name = ""
     dynamic var price = 0
     dynamic var stock = 0
+    
+    override static func primaryKey() -> String? {
+        return "itemNumber"
+    }
 }
