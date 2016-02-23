@@ -12,4 +12,17 @@ import Nimble
 @testable import QuickSample
 
 class RealmSpec: QuickSpec {
+    let dbManager = DBManager()
+    
+    override func spec() {
+        
+        describe("findAll method") {
+            context("when not exist data") {
+                it("output 0 data") {
+                    let results = self.dbManager.findAll()!
+                    expect(results.count).to(equal(0))
+                }
+            }
+        }
+    }
 }
