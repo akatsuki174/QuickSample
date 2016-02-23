@@ -8,6 +8,7 @@ target 'QuickSample' do
 end
 
 target 'QuickSampleTests' do
+  pod 'RealmSwift'
   pod 'Quick', '~> 0.9.1'
   pod 'Nimble', '~> 3.1.0'
 end
