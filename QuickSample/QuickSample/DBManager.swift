@@ -6,7 +6,6 @@
 //  Copyright © 2016年 akatsuki174. All rights reserved.
 //
 
-import Foundation
 import RealmSwift
 
 class DBManager {
