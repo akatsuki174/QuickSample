@@ -31,6 +31,53 @@ class RealmSpec: QuickSpec {
                     expect(results.count).to(equal(0))
                 }
             }
+            
+            context("when exist data") {
+                it("find data") {
+                    let expectGoods = self.createRealmGoods()
+                    self.dbManager.update(expectGoods)
+                    
+                    let results = self.dbManager.findAll()!
+                    let actualGoods = results[0]
+                    
+                    expect(results.count).to(equal(1))
+                    expect(actualGoods.id).to(equal(expectGoods.id))
+                    expect(actualGoods.name).to(equal(expectGoods.name))
+                    expect(actualGoods.price).to(equal(expectGoods.price))
+                    expect(actualGoods.stock).to(equal(expectGoods.stock))
+                }
+            }
+            
+            context("when add some data") {
+                it("find data order by id") {
+                    let first = 1
+                    let second = 2
+                    let third = 3
+                    // add data id = 2, 3, 1
+                    // id = second = 2
+                    let expectGoods2 = self.createRealmGoods()
+                    expectGoods2.id = second
+                    self.dbManager.update(expectGoods2)
+                    // id = third = 3
+                    let expectGoods3 = self.createRealmGoods()
+                    expectGoods3.id = third
+                    self.dbManager.update(expectGoods3)
+                    // id = first = 1
+                    let expectGoods1 = self.createRealmGoods()
+                    expectGoods1.id = first
+                    self.dbManager.update(expectGoods1)
+                    
+                    let results = self.dbManager.findAll()!
+                    let actualGoods1 = results[0]
+                    let actualGoods2 = results[1]
+                    let actualGoods3 = results[2]
+                    
+                    expect(results.count).to(equal(3))
+                    expect(actualGoods1.id).to(equal(first))
+                    expect(actualGoods2.id).to(equal(second))
+                    expect(actualGoods3.id).to(equal(third))
+                }
+            }
         }
         
         describe("update method") {
