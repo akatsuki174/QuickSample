@@ -9,7 +9,7 @@
 import Foundation
 
 class Goods: NSObject {
-    dynamic var itemNumber = 0
+    dynamic var id = 0
     dynamic var name = ""
     dynamic var price = 0
     dynamic var stock = 0
