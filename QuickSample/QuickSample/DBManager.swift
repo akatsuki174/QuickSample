@@ -19,4 +19,26 @@ class DBManager {
         }
         return nil
     }
+    
+    func update(goods: RealmGoods) {
+        do {
+            let realm = try Realm()
+            try! realm.write {
+                realm.add(goods, update: true)
+            }
+        }catch{
+            print("failed")
+        }
+    }
+    
+    func deleteAll() {
+        do {
+            let realm = try Realm()
+            try! realm.write {
+                realm.deleteAll()
+            }
+        }catch{
+            print("failed")
+        }
+    }
 }
