@@ -13,7 +13,7 @@ class DBManager {
         do {
             let realm = try Realm()
             return realm.objects(RealmGoods).sorted("id")
-        }catch{
+        } catch {
             print("failed")
         }
         return nil
@@ -25,7 +25,7 @@ class DBManager {
             try! realm.write {
                 realm.add(goods, update: true)
             }
-        }catch{
+        } catch {
             print("failed")
         }
     }
@@ -36,7 +36,7 @@ class DBManager {
             try! realm.write {
                 realm.deleteAll()
             }
-        }catch{
+        } catch {
             print("failed")
         }
     }
