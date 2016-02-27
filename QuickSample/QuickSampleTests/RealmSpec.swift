@@ -34,7 +34,7 @@ class RealmSpec: QuickSpec {
                 
                 context("when exist data") {
                     it("find data") {
-                        let expectGoods = self.createRealmGoods()
+                        let expectGoods = RealmTestUtils.createRealmGoods()
                         dbManager.update(expectGoods)
                         
                         let results = dbManager.findAll()!
@@ -55,15 +55,15 @@ class RealmSpec: QuickSpec {
                         let third = 3
                         // add data id = 2, 3, 1
                         // id = second = 2
-                        let expectGoods2 = self.createRealmGoods()
+                        let expectGoods2 = RealmTestUtils.createRealmGoods()
                         expectGoods2.id = second
                         dbManager.update(expectGoods2)
                         // id = third = 3
-                        let expectGoods3 = self.createRealmGoods()
+                        let expectGoods3 = RealmTestUtils.createRealmGoods()
                         expectGoods3.id = third
                         dbManager.update(expectGoods3)
                         // id = first = 1
-                        let expectGoods1 = self.createRealmGoods()
+                        let expectGoods1 = RealmTestUtils.createRealmGoods()
                         expectGoods1.id = first
                         dbManager.update(expectGoods1)
                         
@@ -83,7 +83,7 @@ class RealmSpec: QuickSpec {
             describe("update method") {
                 context("when add new data") {
                     it("new data is inserted") {
-                        let expectGoods = self.createRealmGoods()
+                        let expectGoods = RealmTestUtils.createRealmGoods()
                         dbManager.update(expectGoods)
                         
                         let results = dbManager.findAll()!
@@ -97,12 +97,12 @@ class RealmSpec: QuickSpec {
                 
                 context("when add existing data") {
                     it("the data is updated") {
-                        let expectGoods1 = self.createRealmGoods()
+                        let expectGoods1 = RealmTestUtils.createRealmGoods()
                         // add new data
                         dbManager.update(expectGoods1)
                         
                         // add the same id data
-                        let expectGoods2 = self.createRealmGoods()
+                        let expectGoods2 = RealmTestUtils.createRealmGoods()
                         expectGoods2.name = "Goods!"
                         dbManager.update(expectGoods2)
                         
@@ -120,7 +120,7 @@ class RealmSpec: QuickSpec {
             describe("deleteAll method") {
                 it("delete all data") {
                     // add data
-                    dbManager.update(self.createRealmGoods())
+                    dbManager.update(RealmTestUtils.createRealmGoods())
                     
                     // delete all data
                     dbManager.deleteAll()
@@ -131,14 +131,5 @@ class RealmSpec: QuickSpec {
                 }
             }
         }
-    }
-    
-    func createRealmGoods() -> RealmGoods {
-        let realmGoods = RealmGoods()
-        realmGoods.id = 1
-        realmGoods.name = "goods"
-        realmGoods.price = 200
-        realmGoods.stock = 1
-        return realmGoods
     }
 }
