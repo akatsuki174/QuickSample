@@ -23,12 +23,12 @@ class RealmTests : XCTestCase {
         super.tearDown()
     }
     
-    func testFindAllMethod_whenNotExistData_output0Data() {
+    func testDBManagerTest_findAllMethod_whenNotExistData_output0Data() {
         let results = dbManager.findAll()!
         XCTAssertEqual(results.count, 0, "Expect \(results.count) to equal 0")
     }
     
-    func testFindAllMethod_whenExistData_findData() {
+    func testDBManagerTest_findAllMethod_whenExistData_findData() {
         let expectGoods = RealmTestUtils.createRealmGoods()
         dbManager.update(expectGoods)
         
@@ -42,7 +42,7 @@ class RealmTests : XCTestCase {
         XCTAssertEqual(actualGoods.stock, expectGoods.stock, "Expect \(actualGoods.stock) to equal \(expectGoods.stock)")
     }
     
-    func testFindAllMethod_whenAddSomeData_findDataOrderById() {
+    func testDBManagerTest_findAllMethod_whenAddSomeData_findDataOrderById() {
         let first = 1
         let second = 2
         let third = 3
@@ -71,7 +71,7 @@ class RealmTests : XCTestCase {
         XCTAssertEqual(actualGoods3.id, third, "Expect \(actualGoods3.id) to equal \(third)")
     }
     
-    func testUpdateMethod_whenAddNewData_newDataIsInserted() {
+    func testDBManagerTest_updateMethod_whenAddNewData_newDataIsInserted() {
         let expectGoods = RealmTestUtils.createRealmGoods()
         dbManager.update(expectGoods)
         
@@ -84,7 +84,7 @@ class RealmTests : XCTestCase {
         XCTAssertEqual(actualGoods.stock, expectGoods.stock, "Expect \(actualGoods.stock) to equal \(expectGoods.stock)")
     }
     
-    func testUpdateMethod_whenAddExistngData_theDataIsUpdated() {
+    func testDBManagerTest_updateMethod_whenAddExistngData_theDataIsUpdated() {
         let expectGoods1 = RealmTestUtils.createRealmGoods()
         // add new data
         dbManager.update(expectGoods1)
@@ -104,7 +104,7 @@ class RealmTests : XCTestCase {
         XCTAssertEqual(actualGoods.stock, expectGoods2.stock, "Expect \(actualGoods.stock) to equal \(expectGoods2.stock)")
     }
     
-    func testDeleteAllMethod() {
+    func testDBManagerTest_deleteAllMethod() {
         // add data
         dbManager.update(RealmTestUtils.createRealmGoods())
     
