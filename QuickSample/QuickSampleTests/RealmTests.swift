@@ -71,4 +71,36 @@ class RealmTests : XCTestCase {
         XCTAssertEqual(actualGoods3.id, third, "Expect \(actualGoods3.id) to equal \(third)")
     }
     
+    func testUpdateMethod_whenAddNewData_newDataIsInserted() {
+        let expectGoods = RealmTestUtils.createRealmGoods()
+        dbManager.update(expectGoods)
+        
+        let results = dbManager.findAll()!
+        let actualGoods = results[0]
+        
+        XCTAssertEqual(actualGoods.id, expectGoods.id, "Expect \(actualGoods.id) to equal \(expectGoods.id)")
+        XCTAssertEqual(actualGoods.name, expectGoods.name, "Expect \(actualGoods.name) to equal \(expectGoods.name)")
+        XCTAssertEqual(actualGoods.price, expectGoods.price, "Expect \(actualGoods.price) to equal \(expectGoods.price)")
+        XCTAssertEqual(actualGoods.stock, expectGoods.stock, "Expect \(actualGoods.stock) to equal \(expectGoods.stock)")
+    }
+    
+    func testUpdateMethod_whenAddExistngData_theDataIsUpdated() {
+        let expectGoods1 = RealmTestUtils.createRealmGoods()
+        // add new data
+        dbManager.update(expectGoods1)
+    
+        // add the same id data
+        let expectGoods2 = RealmTestUtils.createRealmGoods()
+        expectGoods2.name = "Goods!"
+        dbManager.update(expectGoods2)
+        
+        let results = dbManager.findAll()!
+        let actualGoods = results[0]
+        
+        XCTAssertEqual(results.count, 1, "Expect \(results.count) to equal 1")
+        XCTAssertEqual(actualGoods.id, expectGoods2.id, "Expect \(actualGoods.id) to equal \(expectGoods2.id)")
+        XCTAssertEqual(actualGoods.name, expectGoods2.name, "Expect \(actualGoods.name) to equal \(expectGoods2.name)")
+        XCTAssertEqual(actualGoods.price, expectGoods2.price, "Expect \(actualGoods.price) to equal \(expectGoods2.price)")
+        XCTAssertEqual(actualGoods.stock, expectGoods2.stock, "Expect \(actualGoods.stock) to equal \(expectGoods2.stock)")
+    }
 }
