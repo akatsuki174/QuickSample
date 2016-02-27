@@ -103,4 +103,17 @@ class RealmTests : XCTestCase {
         XCTAssertEqual(actualGoods.price, expectGoods2.price, "Expect \(actualGoods.price) to equal \(expectGoods2.price)")
         XCTAssertEqual(actualGoods.stock, expectGoods2.stock, "Expect \(actualGoods.stock) to equal \(expectGoods2.stock)")
     }
+    
+    func testDeleteAllMethod() {
+        // add data
+        dbManager.update(RealmTestUtils.createRealmGoods())
+    
+        // delete all data
+        dbManager.deleteAll()
+        
+        // find all data
+        let results = dbManager.findAll()!
+        
+        XCTAssertEqual(results.count, 0, "Expect \(results.count) to equal 0")
+    }
 }
