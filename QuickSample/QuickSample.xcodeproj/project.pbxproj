@@ -24,6 +24,7 @@
 		2C3E8EDF1C94538900D74699 /* DistinguishClassSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8EDE1C94538900D74699 /* DistinguishClassSpec.swift */; };
 		2C3E8EE11C9458B100D74699 /* TruthinessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8EE01C9458B100D74699 /* TruthinessSpec.swift */; };
 		2C3E8EE31C946AC700D74699 /* ErrorHandlingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8EE21C946AC700D74699 /* ErrorHandlingSpec.swift */; };
+		2C3E8EE51C94745700D74699 /* CollectionMembershipSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8EE41C94745700D74699 /* CollectionMembershipSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		2C3E8EDE1C94538900D74699 /* DistinguishClassSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistinguishClassSpec.swift; sourceTree = "<group>"; };
 		2C3E8EE01C9458B100D74699 /* TruthinessSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TruthinessSpec.swift; sourceTree = "<group>"; };
 		2C3E8EE21C946AC700D74699 /* ErrorHandlingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandlingSpec.swift; sourceTree = "<group>"; };
+		2C3E8EE41C94745700D74699 /* CollectionMembershipSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionMembershipSpec.swift; sourceTree = "<group>"; };
 		3CCAAF01DD8510AFC6ADEF45 /* Pods-QuickSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickSample/Pods-QuickSample.debug.xcconfig"; sourceTree = "<group>"; };
 		4D0029D70AC6AF680A5C93E8 /* Pods_QuickSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		995607C7218C9AC032DD25D9 /* Pods_QuickSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				2C3E8EDE1C94538900D74699 /* DistinguishClassSpec.swift */,
 				2C3E8EE01C9458B100D74699 /* TruthinessSpec.swift */,
 				2C3E8EE21C946AC700D74699 /* ErrorHandlingSpec.swift */,
+				2C3E8EE41C94745700D74699 /* CollectionMembershipSpec.swift */,
 				2C3E8EC51C7C0A5400D74699 /* Info.plist */,
 			);
 			path = QuickSampleTests;
@@ -373,6 +376,7 @@
 				2C3E8EDD1C940B6F00D74699 /* ComparisonsSpec.swift in Sources */,
 				2C3E8EC41C7C0A5400D74699 /* RealmSpec.swift in Sources */,
 				2C3E8EDF1C94538900D74699 /* DistinguishClassSpec.swift in Sources */,
+				2C3E8EE51C94745700D74699 /* CollectionMembershipSpec.swift in Sources */,
 				2C3E8EE31C946AC700D74699 /* ErrorHandlingSpec.swift in Sources */,
 				2C3E8ED51C8121CF00D74699 /* RealmTests.swift in Sources */,
 				2C3E8EE11C9458B100D74699 /* TruthinessSpec.swift in Sources */,
