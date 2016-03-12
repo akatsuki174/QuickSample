@@ -11,4 +11,29 @@ import Nimble
 
 class ComparisonsSpec: QuickSpec {
     
+    override func spec() {
+        let one = 1
+        let five = 5
+        
+        describe("simple comparisons") {
+            it("can compare functions and signs") {
+                expect(one).to(beLessThan(five))
+                expect(one) < five
+                
+                expect(one).to(beLessThanOrEqualTo(five))
+                expect(one) <= five
+                expect(one).to(beLessThanOrEqualTo(one))
+                expect(one) <= one
+                
+                expect(five).to(beGreaterThan(one))
+                expect(five) > one
+                
+                expect(five).to(beGreaterThanOrEqualTo(one))
+                expect(five) >= one
+                expect(one).to(beGreaterThanOrEqualTo(one))
+                expect(one) >= one
+            }
+        }
+    }
+    
 }
