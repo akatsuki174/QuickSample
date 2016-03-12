@@ -12,8 +12,9 @@ import Nimble
 class ComparisonsSpec: QuickSpec {
     
     override func spec() {
-        let one = 1
-        let five = 5
+        let one:Double = 1
+        let five:Double = 5
+        let five_point_one:Double = 5.1
         
         describe("simple comparisons") {
             it("can compare functions and signs") {
