@@ -30,6 +30,17 @@ class CollectionMembershipSpec : QuickSpec {
                     expect(arr).to(endWith("Python"));
                 }
             }
+            context("collection is not empty") {
+                it("can check all elements match the condition") {
+                    let arr = [1, 3, 5, 7]
+                    expect(arr).to(allPass({$0 < 10}))
+                    expect(arr).to(allPass(beLessThan(10)))
+                    
+                    let set = Set<Int>(arrayLiteral: 1, 3, 5, 7)
+                    expect(set).to(allPass({$0 < 10}))
+                    expect(set).to(allPass(beLessThan(10)))
+                }
+            }
         }
     }
 }
