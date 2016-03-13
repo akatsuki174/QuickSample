@@ -11,4 +11,17 @@ import Nimble
 
 class StringsSpec : QuickSpec {
 
+    override func spec() {
+        describe("strings") {
+            it("can check strings contents") {
+                let str = "My favorite language is Swift."
+                let emptyStr = ""
+                expect(str).to(contain("Swift"))
+                expect(str).to(beginWith("My"))
+                expect(str).to(endWith("."))
+                expect(str).to(match("My*"))
+                expect(emptyStr).to(beEmpty())
+            }
+        }
+    }
 }
