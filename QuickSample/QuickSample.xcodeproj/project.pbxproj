@@ -39,8 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08B4F8F71B83D816F7FCB4FF /* Pods-QuickSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickSample/Pods-QuickSample.release.xcconfig"; sourceTree = "<group>"; };
-		0BD5ABE4D5045BF736B00259 /* Pods-QuickSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickSampleTests/Pods-QuickSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C3E8EAB1C7C0A5400D74699 /* QuickSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3E8EAE1C7C0A5400D74699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3E8EB01C7C0A5400D74699 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,10 +60,8 @@
 		2C3E8EE21C946AC700D74699 /* ErrorHandlingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandlingSpec.swift; sourceTree = "<group>"; };
 		2C3E8EE41C94745700D74699 /* CollectionMembershipSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionMembershipSpec.swift; sourceTree = "<group>"; };
 		2C3E8EE81C94EDD900D74699 /* StringsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsSpec.swift; sourceTree = "<group>"; };
-		3CCAAF01DD8510AFC6ADEF45 /* Pods-QuickSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickSample/Pods-QuickSample.debug.xcconfig"; sourceTree = "<group>"; };
 		4D0029D70AC6AF680A5C93E8 /* Pods_QuickSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		995607C7218C9AC032DD25D9 /* Pods_QuickSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB8CA28B10EB0F48BC521E60 /* Pods-QuickSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickSampleTests/Pods-QuickSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,24 +84,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E1F165A46F4155CA64755DE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0BD5ABE4D5045BF736B00259 /* Pods-QuickSampleTests.debug.xcconfig */,
-				AB8CA28B10EB0F48BC521E60 /* Pods-QuickSampleTests.release.xcconfig */,
-				3CCAAF01DD8510AFC6ADEF45 /* Pods-QuickSample.debug.xcconfig */,
-				08B4F8F71B83D816F7FCB4FF /* Pods-QuickSample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		2C3E8EA21C7C0A5400D74699 = {
 			isa = PBXGroup;
 			children = (
 				2C3E8EAD1C7C0A5400D74699 /* QuickSample */,
 				2C3E8EC21C7C0A5400D74699 /* QuickSampleTests */,
 				2C3E8EAC1C7C0A5400D74699 /* Products */,
-				0E1F165A46F4155CA64755DE /* Pods */,
 				660FD56C769CE3B6BCE1E682 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -231,6 +215,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -500,7 +485,6 @@
 		};
 		2C3E8EC91C7C0A5400D74699 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CCAAF01DD8510AFC6ADEF45 /* Pods-QuickSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QuickSample/Info.plist;
@@ -512,7 +496,6 @@
 		};
 		2C3E8ECA1C7C0A5400D74699 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08B4F8F71B83D816F7FCB4FF /* Pods-QuickSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QuickSample/Info.plist;
@@ -524,7 +507,6 @@
 		};
 		2C3E8ECC1C7C0A5400D74699 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BD5ABE4D5045BF736B00259 /* Pods-QuickSampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = QuickSampleTests/Info.plist;
@@ -537,7 +519,6 @@
 		};
 		2C3E8ECD1C7C0A5400D74699 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB8CA28B10EB0F48BC521E60 /* Pods-QuickSampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = QuickSampleTests/Info.plist;
