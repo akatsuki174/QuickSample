@@ -16,11 +16,11 @@ class DistinguishClassSpec: QuickSpec {
             let animal = Animal()
             let cat = Cat()
             it("can use beAnInstanceOf") {
-                expect(animal).to(beAnInstanceOf(Animal))
+                expect(animal).to(beAnInstanceOf(Animal.self))
             }
             it("can use beAKindOf") {
-                expect(cat).to(beAKindOf(Animal))
-                expect(cat).to(beAKindOf(Cat))
+                expect(cat).to(beAKindOf(Animal.self))
+                expect(cat).to(beAKindOf(Cat.self))
             }
         }
     }

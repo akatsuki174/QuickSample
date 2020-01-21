@@ -16,15 +16,15 @@ class ErrorHandlingSpec : QuickSpec {
             context("when occur error") {
                 it("pass with throwError") {
                     let str = ""
-                    expect{ try self.printStr(str) }.to(throwError())
+                    expect{ try self.printStr(str: str) }.to(throwError())
                     
-                    expect{ try self.printStr(str) }.to(throwError { (error: ErrorType) in
+                    expect{ try self.printStr(str: str) }.to(throwError { (error: Error) in
                         expect(error._domain).to(equal("the value is empty"))
                         expect(error._code).to(equal(-1))
                     })
                     
-                    expect{ try self.requestLogin(str) }.to(throwError(RequestError.Unknown))
-                    expect{ try self.requestLogin(str) }.to(throwError(errorType: RequestError.self))
+                    expect{ try self.requestLogin(name: str) }.to(throwError(RequestError.Unknown))
+                    expect{ try self.requestLogin(name: str) }.to(throwError(errorType: RequestError.self))
                 }
             }
         }
@@ -45,7 +45,7 @@ class ErrorHandlingSpec : QuickSpec {
         // request processing...
     }
     
-    enum RequestError: ErrorType {
+    enum RequestError: Error {
         case Network
         case Unknown
     }

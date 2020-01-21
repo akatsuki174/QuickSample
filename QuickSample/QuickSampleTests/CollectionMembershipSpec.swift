@@ -34,10 +34,8 @@ class CollectionMembershipSpec : QuickSpec {
                 let arr = [1, 3, 5, 7]
                 let set = Set<Int>(arrayLiteral: 1, 3, 5, 7)
                 it("can check all elements match the condition") {
-                    expect(arr).to(allPass({$0 < 10}))
                     expect(arr).to(allPass(beLessThan(10)))
                     
-                    expect(set).to(allPass({$0 < 10}))
                     expect(set).to(allPass(beLessThan(10)))
                 }
                 it("can check collection count") {
