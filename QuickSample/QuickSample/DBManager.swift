@@ -12,7 +12,7 @@ class DBManager {
     func findAll() -> Results<RealmGoods>? {
         do {
             let realm = try Realm()
-            return realm.objects(RealmGoods).sorted("id")
+            return realm.objects(RealmGoods.self).sorted(byKeyPath: "id")
         } catch {
             print("failed")
         }
@@ -23,7 +23,7 @@ class DBManager {
         do {
             let realm = try Realm()
             try! realm.write {
-                realm.add(goods, update: true)
+                realm.add(goods, update: .modified)
             }
         } catch {
             print("failed")

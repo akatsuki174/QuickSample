@@ -11,10 +11,6 @@
 		180A5FE523D5F4C0007DC0C2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE323D5F4C0007DC0C2 /* Nimble.framework */; };
 		180A5FE823D67A49007DC0C2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE623D67A49007DC0C2 /* RealmSwift.framework */; };
 		180A5FE923D67A49007DC0C2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE723D67A49007DC0C2 /* Realm.framework */; };
-		180A5FF023D67BEA007DC0C2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE323D5F4C0007DC0C2 /* Nimble.framework */; };
-		180A5FF123D67BEA007DC0C2 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE323D5F4C0007DC0C2 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		180A5FF223D67BEA007DC0C2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE223D5F4C0007DC0C2 /* Quick.framework */; };
-		180A5FF323D67BEA007DC0C2 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE223D5F4C0007DC0C2 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		180A5FF423D67BEA007DC0C2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE723D67A49007DC0C2 /* Realm.framework */; };
 		180A5FF523D67BEA007DC0C2 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE723D67A49007DC0C2 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		180A5FF623D67BEA007DC0C2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE623D67A49007DC0C2 /* RealmSwift.framework */; };
@@ -56,9 +52,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				180A5FF523D67BEA007DC0C2 /* Realm.framework in Embed Frameworks */,
-				180A5FF323D67BEA007DC0C2 /* Quick.framework in Embed Frameworks */,
 				180A5FF723D67BEA007DC0C2 /* RealmSwift.framework in Embed Frameworks */,
-				180A5FF123D67BEA007DC0C2 /* Nimble.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,9 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				180A5FF423D67BEA007DC0C2 /* Realm.framework in Frameworks */,
-				180A5FF223D67BEA007DC0C2 /* Quick.framework in Frameworks */,
 				180A5FF623D67BEA007DC0C2 /* RealmSwift.framework in Frameworks */,
-				180A5FF023D67BEA007DC0C2 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,13 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C3E8EC81C7C0A5400D74699 /* Build configuration list for PBXNativeTarget "QuickSample" */;
 			buildPhases = (
-				A8BE1E9A5C25A36B58E34285 /* Check Pods Manifest.lock */,
 				2C3E8EA71C7C0A5400D74699 /* Sources */,
 				2C3E8EA81C7C0A5400D74699 /* Frameworks */,
 				2C3E8EA91C7C0A5400D74699 /* Resources */,
-				AE25240575896324D5C7C6E6 /* Embed Pods Frameworks */,
-				AF037DDC4449BA47DE548C15 /* Copy Pods Resources */,
 				180A5FF823D67BEA007DC0C2 /* Embed Frameworks */,
+				180A5FF923D6E9CB007DC0C2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -309,6 +299,25 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		180A5FF923D6E9CB007DC0C2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		40BDCF0F73EE2493B28E60E1 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,51 +331,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A8BE1E9A5C25A36B58E34285 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AE25240575896324D5C7C6E6 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickSample/Pods-QuickSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF037DDC4449BA47DE548C15 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickSample/Pods-QuickSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -523,6 +487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akatsuki174.QuickSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -538,6 +503,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akatsuki174.QuickSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
