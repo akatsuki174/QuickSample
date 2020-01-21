@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0344F3136913B63C5EF6CF19 /* Pods_QuickSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0029D70AC6AF680A5C93E8 /* Pods_QuickSample.framework */; };
-		0FC67BCF7C168926A91D8066 /* Pods_QuickSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995607C7218C9AC032DD25D9 /* Pods_QuickSampleTests.framework */; };
+		180A5FE423D5F4C0007DC0C2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE223D5F4C0007DC0C2 /* Quick.framework */; };
+		180A5FE523D5F4C0007DC0C2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE323D5F4C0007DC0C2 /* Nimble.framework */; };
+		180A5FE823D67A49007DC0C2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE623D67A49007DC0C2 /* RealmSwift.framework */; };
+		180A5FE923D67A49007DC0C2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE723D67A49007DC0C2 /* Realm.framework */; };
+		180A5FF023D67BEA007DC0C2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE323D5F4C0007DC0C2 /* Nimble.framework */; };
+		180A5FF123D67BEA007DC0C2 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE323D5F4C0007DC0C2 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		180A5FF223D67BEA007DC0C2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE223D5F4C0007DC0C2 /* Quick.framework */; };
+		180A5FF323D67BEA007DC0C2 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE223D5F4C0007DC0C2 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		180A5FF423D67BEA007DC0C2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE723D67A49007DC0C2 /* Realm.framework */; };
+		180A5FF523D67BEA007DC0C2 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE723D67A49007DC0C2 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		180A5FF623D67BEA007DC0C2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE623D67A49007DC0C2 /* RealmSwift.framework */; };
+		180A5FF723D67BEA007DC0C2 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE623D67A49007DC0C2 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C3E8EAF1C7C0A5400D74699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8EAE1C7C0A5400D74699 /* AppDelegate.swift */; };
 		2C3E8EB11C7C0A5400D74699 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8EB01C7C0A5400D74699 /* ViewController.swift */; };
 		2C3E8EB41C7C0A5400D74699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3E8EB21C7C0A5400D74699 /* Main.storyboard */; };
@@ -38,7 +48,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		180A5FF823D67BEA007DC0C2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				180A5FF523D67BEA007DC0C2 /* Realm.framework in Embed Frameworks */,
+				180A5FF323D67BEA007DC0C2 /* Quick.framework in Embed Frameworks */,
+				180A5FF723D67BEA007DC0C2 /* RealmSwift.framework in Embed Frameworks */,
+				180A5FF123D67BEA007DC0C2 /* Nimble.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		180A5FE223D5F4C0007DC0C2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		180A5FE323D5F4C0007DC0C2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		180A5FE623D67A49007DC0C2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		180A5FE723D67A49007DC0C2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		2C3E8EAB1C7C0A5400D74699 /* QuickSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3E8EAE1C7C0A5400D74699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3E8EB01C7C0A5400D74699 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +91,6 @@
 		2C3E8EE21C946AC700D74699 /* ErrorHandlingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandlingSpec.swift; sourceTree = "<group>"; };
 		2C3E8EE41C94745700D74699 /* CollectionMembershipSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionMembershipSpec.swift; sourceTree = "<group>"; };
 		2C3E8EE81C94EDD900D74699 /* StringsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsSpec.swift; sourceTree = "<group>"; };
-		4D0029D70AC6AF680A5C93E8 /* Pods_QuickSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		995607C7218C9AC032DD25D9 /* Pods_QuickSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +98,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0344F3136913B63C5EF6CF19 /* Pods_QuickSample.framework in Frameworks */,
+				180A5FF423D67BEA007DC0C2 /* Realm.framework in Frameworks */,
+				180A5FF223D67BEA007DC0C2 /* Quick.framework in Frameworks */,
+				180A5FF623D67BEA007DC0C2 /* RealmSwift.framework in Frameworks */,
+				180A5FF023D67BEA007DC0C2 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +109,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC67BCF7C168926A91D8066 /* Pods_QuickSampleTests.framework in Frameworks */,
+				180A5FE423D5F4C0007DC0C2 /* Quick.framework in Frameworks */,
+				180A5FE523D5F4C0007DC0C2 /* Nimble.framework in Frameworks */,
+				180A5FE823D67A49007DC0C2 /* RealmSwift.framework in Frameworks */,
+				180A5FE923D67A49007DC0C2 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +174,10 @@
 		660FD56C769CE3B6BCE1E682 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				995607C7218C9AC032DD25D9 /* Pods_QuickSampleTests.framework */,
-				4D0029D70AC6AF680A5C93E8 /* Pods_QuickSample.framework */,
+				180A5FE723D67A49007DC0C2 /* Realm.framework */,
+				180A5FE623D67A49007DC0C2 /* RealmSwift.framework */,
+				180A5FE323D5F4C0007DC0C2 /* Nimble.framework */,
+				180A5FE223D5F4C0007DC0C2 /* Quick.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +195,7 @@
 				2C3E8EA91C7C0A5400D74699 /* Resources */,
 				AE25240575896324D5C7C6E6 /* Embed Pods Frameworks */,
 				AF037DDC4449BA47DE548C15 /* Copy Pods Resources */,
+				180A5FF823D67BEA007DC0C2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,8 +214,7 @@
 				2C3E8EBB1C7C0A5400D74699 /* Sources */,
 				2C3E8EBC1C7C0A5400D74699 /* Frameworks */,
 				2C3E8EBD1C7C0A5400D74699 /* Resources */,
-				F1B4E6B62003627413B245D3 /* Embed Pods Frameworks */,
-				ACE7E46E3A10C182D007AFB8 /* Copy Pods Resources */,
+				180A5FEF23D67AC8007DC0C2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,6 +288,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		180A5FEF23D67AC8007DC0C2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		40BDCF0F73EE2493B28E60E1 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,21 +339,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		ACE7E46E3A10C182D007AFB8 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickSampleTests/Pods-QuickSampleTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AE25240575896324D5C7C6E6 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,21 +367,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickSample/Pods-QuickSample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F1B4E6B62003627413B245D3 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickSampleTests/Pods-QuickSampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -487,6 +515,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QuickSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akatsuki174.QuickSample;
@@ -498,6 +530,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QuickSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akatsuki174.QuickSample;
@@ -509,6 +545,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QuickSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akatsuki174.QuickSampleTests;
@@ -521,6 +561,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QuickSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akatsuki174.QuickSampleTests;
