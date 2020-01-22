@@ -10,7 +10,7 @@ class FizzBuzzSpec : QuickSpec {
         describe("fizzBuzz method") {
             context("when enter 2") {
                 it("should return 2") {
-                    expect("12").to(equal(fizzBuzz.fizzBuzz(num: 2)))
+                    expect("2").to(equal(fizzBuzz.fizzBuzz(num: 2)))
                 }
             }
             context("when enter 3") {
