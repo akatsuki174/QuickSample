@@ -15,6 +15,8 @@
 		180A5FF523D67BEA007DC0C2 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE723D67A49007DC0C2 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		180A5FF623D67BEA007DC0C2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE623D67A49007DC0C2 /* RealmSwift.framework */; };
 		180A5FF723D67BEA007DC0C2 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 180A5FE623D67A49007DC0C2 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		180A5FFB23D7DA43007DC0C2 /* FizzBuzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A5FFA23D7DA43007DC0C2 /* FizzBuzz.swift */; };
+		180A5FFD23D7DC33007DC0C2 /* FizzBuzzSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A5FFC23D7DC33007DC0C2 /* FizzBuzzSpec.swift */; };
 		2C3E8EAF1C7C0A5400D74699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8EAE1C7C0A5400D74699 /* AppDelegate.swift */; };
 		2C3E8EB11C7C0A5400D74699 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E8EB01C7C0A5400D74699 /* ViewController.swift */; };
 		2C3E8EB41C7C0A5400D74699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3E8EB21C7C0A5400D74699 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		180A5FE323D5F4C0007DC0C2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		180A5FE623D67A49007DC0C2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		180A5FE723D67A49007DC0C2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		180A5FFA23D7DA43007DC0C2 /* FizzBuzz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzz.swift; sourceTree = "<group>"; };
+		180A5FFC23D7DC33007DC0C2 /* FizzBuzzSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzSpec.swift; sourceTree = "<group>"; };
 		2C3E8EAB1C7C0A5400D74699 /* QuickSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3E8EAE1C7C0A5400D74699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3E8EB01C7C0A5400D74699 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				2C3E8EB51C7C0A5400D74699 /* Assets.xcassets */,
 				2C3E8EB71C7C0A5400D74699 /* LaunchScreen.storyboard */,
 				2C3E8EBA1C7C0A5400D74699 /* Info.plist */,
+				180A5FFA23D7DA43007DC0C2 /* FizzBuzz.swift */,
 			);
 			path = QuickSample;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				2C3E8EE21C946AC700D74699 /* ErrorHandlingSpec.swift */,
 				2C3E8EE41C94745700D74699 /* CollectionMembershipSpec.swift */,
 				2C3E8EE81C94EDD900D74699 /* StringsSpec.swift */,
+				180A5FFC23D7DC33007DC0C2 /* FizzBuzzSpec.swift */,
 				2C3E8EC51C7C0A5400D74699 /* Info.plist */,
 			);
 			path = QuickSampleTests;
@@ -328,6 +334,7 @@
 				2C3E8ECF1C7C167200D74699 /* RealmGoods.swift in Sources */,
 				2C3E8ED11C7C182B00D74699 /* Goods.swift in Sources */,
 				2C3E8EAF1C7C0A5400D74699 /* AppDelegate.swift in Sources */,
+				180A5FFB23D7DA43007DC0C2 /* FizzBuzz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +350,7 @@
 				2C3E8EE51C94745700D74699 /* CollectionMembershipSpec.swift in Sources */,
 				2C3E8EE31C946AC700D74699 /* ErrorHandlingSpec.swift in Sources */,
 				2C3E8ED51C8121CF00D74699 /* RealmTests.swift in Sources */,
+				180A5FFD23D7DC33007DC0C2 /* FizzBuzzSpec.swift in Sources */,
 				2C3E8EE11C9458B100D74699 /* TruthinessSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
